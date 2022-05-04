@@ -25,24 +25,31 @@ function MainHeaders() {
         </div>
         <div className={`hidden md:block`}>
           <div className="space-x-8">
-            <Button classes={`px-3 text-gray-600 dark:text-gray-300 font-semibold`} href="/">
+            <Button
+              classes={`px-3 text-gray-600 dark:text-gray-300 font-semibold`}
+              href="/"
+              hoverEffect={true}
+            >
               About Me
             </Button>
             <Button
               classes={`px-3 text-gray-600 dark:text-gray-300 font-semibold`}
               href="/projects"
+              hoverEffect={true}
             >
               Projects
             </Button>
             <Button
               classes={`px-3 text-gray-600 dark:text-gray-300 font-semibold`}
               href="/experience"
+              hoverEffect={true}
             >
               Experience
             </Button>
             <Button
               classes={`px-3 text-gray-600 dark:text-gray-300 font-semibold`}
               href="/contact"
+              hoverEffect={true}
             >
               Contact
             </Button>
@@ -54,10 +61,12 @@ function MainHeaders() {
             classes="text-base font-normal text-gray-600 dark:text-gray-300"
           >
             <LinkedIn class="h-6 w-6 hover:text-blue-600" />
+            <span className="sr-only">Linkedin URL</span>
           </Button>
           <Button
             classes="text-base font-normal text-gray-300"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            title="Toggle theme button"
           >
             {mounted && theme === "dark" ? (
               <SunFilled class="h-6 w-6 hover:text-yellow-400" />
