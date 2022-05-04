@@ -7,20 +7,47 @@ type buttonProps = {
   classes?: string;
   href?: string;
   onClick?: React.MouseEventHandler;
+  type?: "button" | "submit" | "reset";
+  name?: string;
+  title?: string;
+  ariaLabel?: string;
+  hoverEffect?: boolean;
   children: React.ReactNode;
 };
 
 function Button(props: buttonProps) {
-  const { classes, href, onClick, children } = props;
+  const {
+    classes,
+    href,
+    onClick,
+    children,
+    type,
+    name,
+    title,
+    ariaLabel,
+    hoverEffect,
+  } = props;
+
+  const hoverEffectClass = `after:content-[''] 
+                            relative no-underline 
+                            after:absolute after:w-full 
+                            after:h-1 after:bg-logo-blue after:-bottom-1 
+                            after:left-0 after:right-0 
+                            after:scale-x-0 after:origin-center 
+                            after:transition-transform 
+                            hover:after:origin-center hover:after:scale-x-100`;
 
   const classnames = classNames(
-    classes ? classes : "shadow-xl bg-cyan-500 rounded-md text-white"
+    classes ? `${classes}` : "shadow-xl bg-cyan-500 rounded-md text-white",
+    hoverEffect && hoverEffectClass
   );
 
   if (href) {
     return (
       <Link href={href}>
-        <a className={classnames}>{children}</a>
+        <a className={classnames} aria-label={ariaLabel}>
+          {children}
+        </a>
       </Link>
     );
   }
@@ -29,6 +56,9 @@ function Button(props: buttonProps) {
     <button
       className={classnames}
       onClick={onClick}
+      type={type || "button"}
+      name={name}
+      title={title}
     >
       {children}
     </button>
