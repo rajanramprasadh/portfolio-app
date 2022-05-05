@@ -11,7 +11,7 @@ type buttonProps = {
   name?: string;
   title?: string;
   ariaLabel?: string;
-  hoverEffect?: boolean;
+  afterHoverEffect?: boolean;
   children: React.ReactNode;
 };
 
@@ -25,21 +25,17 @@ function Button(props: buttonProps) {
     name,
     title,
     ariaLabel,
-    hoverEffect,
+    afterHoverEffect,
   } = props;
 
-  const hoverEffectClass = `after:content-[''] 
-                            relative no-underline 
-                            after:absolute after:w-full 
-                            after:h-1 after:bg-logo-blue after:-bottom-1 
-                            after:left-0 after:right-0 
-                            after:scale-x-0 after:origin-center 
-                            after:transition-transform 
-                            hover:after:origin-center hover:after:scale-x-100`;
+  const afterHoverEffectClass = `after:content-[''] relative after:absolute after:w-full 
+                                after:h-1 after:bg-logo-blue after:-bottom-1 after:left-0 after:right-0 
+                                after:scale-x-0 after:origin-center after:ease-in-out after:duration-500
+                                hover:after:origin-center hover:after:scale-x-100`;
 
   const classnames = classNames(
     classes ? `${classes}` : "shadow-xl bg-cyan-500 rounded-md text-white",
-    hoverEffect && hoverEffectClass
+    afterHoverEffect && afterHoverEffectClass
   );
 
   if (href) {

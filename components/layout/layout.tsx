@@ -1,4 +1,4 @@
-import MainHeaders from "./main-headers";
+import MainHeaders from "./main-headers/main-headers";
 
 function Layout(props: any) {
   return (

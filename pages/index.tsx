@@ -6,8 +6,8 @@ import portfolioProfile from "../public/portfolio_profile_img.jpg";
 
 const Home: NextPage = () => {
   return (
-    <div className={`max-w-6xl mx-auto`}>
-      <Image src={portfolioProfile} alt="Ram Prasadh Varadharajan"></Image>
+    <div className={`m-full mx-auto`}>
+      {/* <Image src={portfolioProfile} alt="Ram Prasadh Varadharajan"></Image> */}
     </div>
   );
 };
