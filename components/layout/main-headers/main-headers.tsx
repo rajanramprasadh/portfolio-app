@@ -13,9 +13,9 @@ function MainHeaders() {
   const [open, toggleDrawer] = useToggler(false);
 
   return (
-    <header className={`z-0 w-full bg-white dark:bg-slate-800`}>
+    <header className={`z-0 w-full transition-colors duration-500 bg-white dark:bg-slate-800`}>
       <nav
-        className={`max-w-6xl mx-auto flex justify-between items-center h-16 py-10 px-4 md:px-0 md:py-20`}
+        className={`max-w-6xl mx-auto w-11/12 flex justify-between items-center h-16 py-10 px-4 md:px-0 md:py-20`}
       >
         <div className="w-20 h-20">
           <PortfolioLogo />

@@ -7,6 +7,9 @@
 /* Font - Ms Madi */
 @import url('https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap');
 
+/* Font - Delius Unicase */
+@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&display=swap');
+
 /* Tailwind */
 @tailwind base;
 @tailwind components;
