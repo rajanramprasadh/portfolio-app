@@ -12,7 +12,7 @@ function HamburgerButton(props: HamburgerButtonProps) {
 
   return (
     <Button
-      classes="z-20 flex relative w-12 h-8 flex-col justify-between items-center md:hidden"
+      classes={`z-20 flex md:relative w-12 h-8 flex-col justify-between items-center md:hidden right-8 ${ open && 'fixed' }`}
       onClick={onClick}
     >
       <span
