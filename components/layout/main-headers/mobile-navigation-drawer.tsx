@@ -17,7 +17,7 @@ function MobileNavigationDrawer({ isOpened }: MobileNavigationDrawerProps) {
     >
       <NavigationItems />
 
-      <div className={`sticky md:fixed top-3/4 space-y-10 flex flex-col items-center`}>
+      <div className={`fixed md:sticky top-3/4 space-y-10 flex flex-col items-center`}>
         <HeaderButtons />
       </div>
     </aside>
