@@ -1,14 +1,15 @@
-import { Hero } from "components/hero";
-import Card from "components/ui/card";
-import type { NextPage } from "next";
-import Image from "next/image";
+import Head from "next/head";
 
-import portfolioProfile from "../public/portfolio_profile_img.jpg";
+import { Hero } from "components/hero";
+import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
     <div className={`m-full mx-auto`}>
-      {/* <Image src={portfolioProfile} alt="Ram Prasadh Varadharajan"></Image> */}
+      <Head>
+        <html lang="en" />
+        <title>About Me</title>
+      </Head>
       <Hero />
     </div>
   );

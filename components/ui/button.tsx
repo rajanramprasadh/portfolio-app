@@ -55,6 +55,7 @@ function Button(props: buttonProps) {
       type={type || "button"}
       name={name}
       title={title}
+      aria-label={ariaLabel}
     >
       {children}
     </button>
