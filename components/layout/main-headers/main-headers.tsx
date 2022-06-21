@@ -8,16 +8,24 @@ import { useToggler } from "Utilities";
 import MobileNavigationDrawer from "./mobile-navigation-drawer";
 import NavigationItems from "./navigation-items";
 
-function MainHeaders() {
+interface MainHeadersProps {
+  isShrunk: boolean;
+}
+
+function MainHeaders({ isShrunk }: MainHeadersProps) {
   // const [open, setOpen] = useState(false);
   const [open, toggleDrawer] = useToggler(false);
 
   return (
-    <header className={`z-0 w-full transition-colors duration-500 bg-white dark:bg-slate-800`}>
+    <header
+      className={`sticky top-0 left-0 z-50 w-full transition-colors duration-500 bg-white dark:bg-slate-800 shadow-xl transition-all duration-500`}
+    >
       <nav
-        className={`max-w-6xl mx-auto w-11/12 flex justify-between items-center h-16 py-10 px-4 md:px-0 md:py-20`}
+        className={`max-w-6xl mx-auto w-11/12 flex justify-between items-center h-16 py-10 px-4 md:px-0 md:${
+          isShrunk ? "py-12" : "py-20"
+        } transition-all duration-500`}
       >
-        <div className="w-20 h-20">
+        <div className={`w-20 h-auto`}>
           <PortfolioLogo />
         </div>
         <div className={`hidden md:block`}>

@@ -12,8 +12,11 @@ function HamburgerButton(props: HamburgerButtonProps) {
 
   return (
     <Button
-      classes={`z-20 flex md:relative w-12 h-8 flex-col justify-between items-center md:hidden right-8 ${ open && 'fixed' }`}
+      classes={`z-20 flex md:relative w-12 h-8 flex-col justify-between items-center md:hidden right-8 ${
+        open && "sticky"
+      }`}
       onClick={onClick}
+      ariaLabel="Menu Button"
     >
       <span
         className={`h-1 w-full bg-gray-600 dark:bg-gray-300 rounded-lg transform transition duration-300 ease-in-out ${
