@@ -1,5 +1,4 @@
-import { title } from "process";
-import React from "react";
+import Head from "next/head";
 
 interface UnderConstructionProps {
   title: string;
@@ -8,6 +7,9 @@ interface UnderConstructionProps {
 function UnderConstruction({ title }: UnderConstructionProps) {
   return (
     <>
+      <Head>
+        <title>{title}</title>
+      </Head>
       <div className="transition-all duration-500 bg-[#F1F1F1] dark:bg-gray-900 h-screen align-center flex flex-row items-center justify-center mx-auto">
         <div>
           <h1 className="inline-block border-r border-gray-500 p-8 text-2xl align-top">
